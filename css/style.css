@@ -27,6 +27,83 @@ body {
   src: url(/font/Super\ Mario\ Bros.\ 2.ttf);
 }
 
+@media (max-width: 1200px) {
+  .navbar {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .icon {
+    margin-left: 0;
+  }
+  .navbar a {
+    font-size: 28px;
+    padding: 34px 11px;
+  }
+  .dialogtext {
+    font-size: 22px;
+  }
+  .bottone-inizia {
+    font-size: 36px;
+  }
+  .collegamentosteam {
+    font-size: 20px;
+  }
+  .personaggi-steam {
+    font-size: 48px;
+  }
+  .card {
+    font-size: 24px;
+  }
+  .fine-pagina {
+    font-size: 36px;
+  }
+  .torna-su {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .icon {
+    margin-left: 0;
+  }
+  .navbar a {
+    font-size: 24px;
+    padding: 34px 11px;
+  }
+  .dialogtext {
+    font-size: 18px;
+  }
+  .bottone-inizia {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  .collegamentosteam {
+    font-size: 18px;
+  }
+  .personaggi-steam {
+    font-size: 36px;
+  }
+  .card {
+    font-size: 18px;
+  }
+  .fine-pagina {
+    font-size: 24px;
+  }
+  .torna-su {
+    font-size: 24px;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -283,81 +360,10 @@ footer {
   height: 102px;
   transform: translateY(-30px);
   z-index: 2;
+  cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-  .navbar {
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .logo {
-    margin-right: 0;
-  }
-  .icon {
-    margin-left: 0;
-  }
-  .navbar a {
-    font-size: 28px;
-    padding: 34px 11px;
-  }
-  .dialogtext {
-    font-size: 22px;
-  }
-  .bottone-inizia {
-    font-size: 36px;
-  }
-  .collegamentosteam {
-    font-size: 20px;
-  }
-  .personaggi-steam {
-    font-size: 48px;
-  }
-  .card {
-    font-size: 24px;
-  }
-  .fine-pagina {
-    font-size: 36px;
-  }
-  .torna-su {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .logo {
-    margin-right: 0;
-  }
-  .icon {
-    margin-left: 0;
-  }
-  .navbar a {
-    font-size: 24px;
-    padding: 34px 11px;
-  }
-  .dialogtext {
-    font-size: 18px;
-  }
-  .bottone-inizia {
-    font-size: 24px;
-    margin: 0 auto;
-  }
-  .collegamentosteam {
-    font-size: 18px;
-  }
-  .personaggi-steam {
-    font-size: 36px;
-  }
-  .card {
-    font-size: 18px;
-  }
-  .fine-pagina {
-    font-size: 24px;
-  }
-  .torna-su {
-    font-size: 24px;
-  }
+.copyright {
+  font-family: minecraft;
+  font-size: 20px;
 }

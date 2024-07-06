@@ -14,8 +14,11 @@
       <a href="who.html">Who?</a>
       <a href="index.html">Home</a>
       <a href="how.html">How?</a>
+
       <div class="icon">
-        <img src="img/github.png" />
+        <a href="https://github.com/adeleiitaliano">
+          <img src="img/github.png" />
+        </a>
       </div>
     </div>
 
@@ -268,7 +271,22 @@
           fine della pagina!
         </p>
       </div>
-      <button class="footer-button" id="scrollToTopBtn">Torna Su!</button>
+      <button class="footer-button" id="backToTopBtn">Torna Su!</button>
+      <script defer>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.addEventListener("scroll", function () {
+          const scrollY = window.scrollY || document.documentElement.scrollTop;
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      </script>
+      <p class="copyright">Copyright by Adele Italiano - 2024</p>
     </footer>
   </body>
 </html>

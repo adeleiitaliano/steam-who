@@ -26,13 +26,4 @@ document.querySelectorAll(".card").forEach((card) => {
     card.querySelector(".card-inner").classList.toggle("is-flipped");
   });
 });
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Aggiungi un event listener al pulsante
-scrollToTopBtn.addEventListener("click", () => {
-  // Scorri la pagina verso l'alto
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Scroll liscio
-  });
-});
