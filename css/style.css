@@ -5,6 +5,19 @@ body {
   font-family: minecraft;
 }
 
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
 @font-face {
   font-family: minecraft;
   src: url(/font/Minecraft.ttf);
@@ -13,13 +26,15 @@ body {
   font-family: supermario;
   src: url(/font/Super\ Mario\ Bros.\ 2.ttf);
 }
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
+
 .navbar a {
-  float: left;
   font-size: 32px;
   color: #1e1e1e;
   text-align: center;
@@ -28,7 +43,6 @@ body {
 }
 
 .logo {
-  float: left;
   margin-right: 300px;
 }
 
@@ -38,7 +52,6 @@ body {
 }
 
 .icon {
-  float: right;
   margin-left: 300px;
 }
 
@@ -47,90 +60,134 @@ body {
   height: 92px;
 }
 
-.gatto {
-  float: left;
-  width: 436px;
-  height: 458px;
-  margin-top: 60px;
-  margin-left: 400px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-.dialog {
-  float: right;
+
+.gatto {
+  width: 80%;
+  max-width: 436px;
+  height: auto;
+  margin: 20px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.dialog-container {
   width: 645px;
   height: 271px;
-  margin-top: 60px;
-  margin-right: 400px;
+  position: relative;
+}
+
+.dialog {
+  width: 100%;
+  height: 100%;
 }
 
 .dialogtext {
-  transform: translate(8px, -59%);
+  position: absolute;
+  top: 22%;
+  left: 56%;
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 26px;
-  margin-right: 300px;
+  width: 80%;
+}
+
+.button-container {
+  text-align: center;
+  margin: 20px;
 }
 
 .bottone-inizia {
   background-image: url(/img/button.png);
-  width: 330px;
+  width: 80%;
+  max-width: 330px;
   height: 102px;
   background-size: cover;
   background-position: center;
   border: none;
   cursor: pointer;
   text-align: center;
-  transform: translate(220px, -200%);
   color: white;
   font-family: minecraft;
   font-size: 48px;
+  display: block;
+  margin-top: 20%;
+  margin-left: 30%;
+  transform: translateY(-220px);
 }
+
 .collegamentosteam {
   text-align: center;
-  margin-top: -190px;
-  margin-right: 315px;
-  margin-bottom: 300px;
   font-size: 26px;
+  margin: 20px auto;
+  margin-left: 550px;
+  transform: translateY(-110px);
 }
 
 .personaggi-steam {
   font-family: supermario;
   text-align: center;
-  margin-top: 175px;
-  margin-bottom: 100px;
   font-size: 62px;
   color: #1e1e1e;
+  margin: 70px 0;
+}
+
+.custom-link {
+  color: #5465ff;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: #5465ff;
+}
+
+.custom-link:active {
+  color: #5465ff;
+}
+
+.custom-link:visited {
+  color: #5465ff;
 }
 
 .carousel-container {
   position: relative;
-  width: calc(100%);
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1000px;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .carousel {
   display: flex;
   transition: transform 0.3s ease-in-out;
-  gap: 56px;
+  gap: 20px;
 }
 
 .card {
-  width: 340px;
-  height: 495px;
-  flex: 0 0 calc((80% - 56px * 2) / 3);
-  margin: 0;
-  padding: 20px;
+  width: 30%;
+  min-width: 200px;
+  min-height: 495px;
+  height: auto;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  padding: 60px;
   background-color: #95acff;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  position: relative;
-  font-size: 48px;
+  font-size: 32px;
 }
+
 .card img {
-  width: 300px;
+  width: 200px;
+  height: auto;
   border-radius: 50%;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 }
 
 .carousel-button {
@@ -165,13 +222,110 @@ body {
 }
 
 footer {
-  width: 100%;
-  height: 382px;
-  background-color: #9aafff;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #5c6cfa;
+  color: #fff;
+  padding: 20px;
   text-align: center;
-  margin-top: 248px;
+  margin-top: 230px;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* Added this line */
+  align-items: center;
+}
+
+.footer-text {
+  font-size: 48px;
+  text-align: center;
+}
+
+.footer-button {
+  font-size: 48px;
+  font-family: minecraft;
+  background-image: url(/img/button.png);
+  color: #fff;
+  border: none;
+  min-width: 330px;
+  height: 102px;
+  transform: translateY(-30px);
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .icon {
+    margin-left: 0;
+  }
+  .navbar a {
+    font-size: 28px;
+    padding: 34px 11px;
+  }
+  .dialogtext {
+    font-size: 22px;
+  }
+  .bottone-inizia {
+    font-size: 36px;
+  }
+  .collegamentosteam {
+    font-size: 20px;
+  }
+  .personaggi-steam {
+    font-size: 48px;
+  }
+  .card {
+    font-size: 24px;
+  }
+  .fine-pagina {
+    font-size: 36px;
+  }
+  .torna-su {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .icon {
+    margin-left: 0;
+  }
+  .navbar a {
+    font-size: 24px;
+    padding: 34px 11px;
+  }
+  .dialogtext {
+    font-size: 18px;
+  }
+  .bottone-inizia {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  .collegamentosteam {
+    font-size: 18px;
+  }
+  .personaggi-steam {
+    font-size: 36px;
+  }
+  .card {
+    font-size: 18px;
+  }
+  .fine-pagina {
+    font-size: 24px;
+  }
+  .torna-su {
+    font-size: 24px;
+  }
 }

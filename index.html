@@ -15,27 +15,29 @@
       <a href="index.html">Home</a>
       <a href="how.html">How?</a>
       <div class="icon">
-        <a href="https://github.com/adeleiitaliano">
-          <img src="img/github.png" />
-        </a>
+        <img src="img/github.png" />
       </div>
     </div>
 
-    <img class="gatto" src="img/gatto.png" />
-    <img class="dialog" src="img/dialog.png" />
-
-    <p class="dialogtext">
-      Ciao, sono katinator! <br />
-      Pensa ad un personaggio reale tra <br />
-      quelli disponibili e lo indovinero!
-    </p>
-
-    <button class="bottone-inizia">Inizia!</button>
+    <div class="container">
+      <img class="gatto" src="img/gatto.png" />
+      <div class="dialog-container">
+        <img class="dialog" src="img/dialog.png" />
+        <p class="dialogtext">
+          Ciao, sono katinator! <br />
+          Pensa ad un personaggio reale tra <br />
+          quelli disponibili e lo indovinero!
+        </p>
+        <button class="bottone-inizia">Inizia!</button>
+      </div>
+    </div>
 
     <p class="collegamentosteam">
       Vuoi scoprire i personaggi <br />
       che puoi indovinare? <br />
-      <a href="#personaggi"><strong>Fallo subito!</strong></a>
+      <a href="#personaggi" class="custom-link"
+        ><strong>Fallo subito!</strong></a
+      >
     </p>
     <h1 class="personaggi-steam" id="personaggi">PERSONAGGI STEAM</h1>
     <center>
@@ -127,6 +129,14 @@
       </div>
       <script src="/js/scripts.js"></script>
     </center>
-    <footer></footer>
+    <footer>
+      <div class="footer-container">
+        <p class="footer-text">
+          Sei arrivato alla <br />
+          fine della pagina!
+        </p>
+      </div>
+      <button class="footer-button">Torna Su!</button>
+    </footer>
   </body>
 </html>
